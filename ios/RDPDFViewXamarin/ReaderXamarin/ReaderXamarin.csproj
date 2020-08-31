@@ -9,7 +9,7 @@
     <RootNamespace>ReaderXamarin</RootNamespace>
     <AssemblyName>ReaderXamarin</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <ReleaseVersion>1.3</ReleaseVersion>
+    <ReleaseVersion>4.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -92,6 +92,23 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Resources\DlgAnnotPropIcon.xib" />
+    <InterfaceDefinition Include="Resources\DlgAnnotPropMarkup.xib" />
+    <InterfaceDefinition Include="Resources\RDPageViewController.xib" />
+    <InterfaceDefinition Include="Resources\PDFPagesCtrl.storyboard" />
+    <InterfaceDefinition Include="Resources\RDFileCollectionViewController.xib" />
+    <InterfaceDefinition Include="Resources\UIPageCellView.xib" />
+    <InterfaceDefinition Include="Resources\DlgAnnotPropComm.xib" />
+    <InterfaceDefinition Include="Resources\SearchResultViewController.xib" />
+    <InterfaceDefinition Include="Resources\RDPDFReflowViewController.xib" />
+    <InterfaceDefinition Include="Resources\RDMetaDataViewController.xib" />
+    <InterfaceDefinition Include="Resources\RDTreeViewController.xib" />
+    <InterfaceDefinition Include="Resources\RDPopupTextViewController.xib" />
+    <InterfaceDefinition Include="Resources\RDFileDetailViewController.xib" />
+    <InterfaceDefinition Include="Resources\DlgAnnotPropLine.xib" />
+    <InterfaceDefinition Include="Resources\RDAnnotPickerViewController.xib" />
+    <InterfaceDefinition Include="Resources\RDFileCollectionViewCell.xib" />
+    <InterfaceDefinition Include="Resources\PDFReaderCtrl.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -112,43 +129,32 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\test.pdf" />
     <BundleResource Include="Resources\en.lproj\Localizable.strings" />
     <BundleResource Include="Resources\it.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\cmaps\cmaps.dat" />
-    <BundleResource Include="Resources\cmaps\cmyk_rgb.dat" />
+    <BundleResource Include="Resources\enc.pdf" />
+    <BundleResource Include="Resources\help.pdf" />
+    <BundleResource Include="Resources\outlines.pdf" />
+    <BundleResource Include="Resources\test.pdf" />
+    <BundleResource Include="Resources\GUST e-foundry License.txt" />
+    <BundleResource Include="Resources\fld.pdf" />
     <BundleResource Include="Resources\cmaps\umaps.dat" />
-    <BundleResource Include="Resources\fdat\GUST e-foundry License.txt" />
-    <BundleResource Include="Resources\fdat\help.pdf" />
-    <BundleResource Include="Resources\fdat\stdFont\argbsn00lp.ttf" />
-    <BundleResource Include="Resources\fdat\stdFont\arimo.ttf" />
-    <BundleResource Include="Resources\fdat\stdFont\arimob.ttf" />
-    <BundleResource Include="Resources\fdat\stdFont\arimobi.ttf" />
-    <BundleResource Include="Resources\fdat\stdFont\arimoi.ttf" />
-    <BundleResource Include="Resources\fdat\stdFont\cousine.ttf" />
-    <BundleResource Include="Resources\fdat\stdFont\cousineb.ttf" />
-    <BundleResource Include="Resources\fdat\stdFont\cousinebi.ttf" />
-    <BundleResource Include="Resources\fdat\stdFont\cousinei.ttf" />
-    <BundleResource Include="Resources\fdat\stdFont\rdf008.ttf" />
-    <BundleResource Include="Resources\fdat\stdFont\rdf013.ttf" />
-    <BundleResource Include="Resources\fdat\stdFont\texgyretermes-bold.otf" />
-    <BundleResource Include="Resources\fdat\stdFont\texgyretermes-bolditalic.otf" />
-    <BundleResource Include="Resources\fdat\stdFont\texgyretermes-italic.otf" />
-    <BundleResource Include="Resources\fdat\stdFont\texgyretermes-regular.otf" />
-    <BundleResource Include="Resources\fdat\stdRes\00" />
-    <BundleResource Include="Resources\fdat\stdRes\01" />
-    <BundleResource Include="Resources\fdat\stdRes\02" />
-    <BundleResource Include="Resources\fdat\stdRes\03" />
-    <BundleResource Include="Resources\fdat\stdRes\04" />
-    <BundleResource Include="Resources\fdat\stdRes\05" />
-    <BundleResource Include="Resources\fdat\stdRes\06" />
-    <BundleResource Include="Resources\fdat\stdRes\07" />
-    <BundleResource Include="Resources\fdat\stdRes\08" />
-    <BundleResource Include="Resources\fdat\stdRes\09" />
-    <BundleResource Include="Resources\fdat\stdRes\10" />
-    <BundleResource Include="Resources\fdat\stdRes\11" />
-    <BundleResource Include="Resources\fdat\stdRes\12" />
-    <BundleResource Include="Resources\fdat\stdRes\13" />
+    <BundleResource Include="Resources\cmaps\cmyk_rgb.dat" />
+    <BundleResource Include="Resources\cmaps\cmaps.dat" />
+    <BundleResource Include="Resources\fonts\cousineb.ttf" />
+    <BundleResource Include="Resources\fonts\arimob.ttf" />
+    <BundleResource Include="Resources\fonts\texgyretermes-bolditalic.otf" />
+    <BundleResource Include="Resources\fonts\cousine.ttf" />
+    <BundleResource Include="Resources\fonts\rdf008.dat" />
+    <BundleResource Include="Resources\fonts\texgyretermes-bold.otf" />
+    <BundleResource Include="Resources\fonts\argbsn00lp.ttf" />
+    <BundleResource Include="Resources\fonts\texgyretermes-regular.otf" />
+    <BundleResource Include="Resources\fonts\cousinebi.ttf" />
+    <BundleResource Include="Resources\fonts\arimo.ttf" />
+    <BundleResource Include="Resources\fonts\arimobi.ttf" />
+    <BundleResource Include="Resources\fonts\arimoi.ttf" />
+    <BundleResource Include="Resources\fonts\rdf013.dat" />
+    <BundleResource Include="Resources\fonts\cousinei.ttf" />
+    <BundleResource Include="Resources\fonts\texgyretermes-italic.otf" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Images.xcassets\Contents.json" />
@@ -277,8 +283,6 @@
     <ImageAsset Include="Images.xcassets\manage_mark.imageset\Contents.json" />
     <ImageAsset Include="Images.xcassets\manage_mark.imageset\manage_mark-1.png" />
     <ImageAsset Include="Images.xcassets\manage_mark.imageset\manage_mark%402x.png" />
-    <ImageAsset Include="Images.xcassets\pdf_custom_stamp.imageset\Contents.json" />
-    <ImageAsset Include="Images.xcassets\pdf_custom_stamp.imageset\pdf_custom_stamp.png" />
     <ImageAsset Include="Images.xcassets\view_about.imageset\Contents.json" />
     <ImageAsset Include="Images.xcassets\view_about.imageset\view_about.png" />
     <ImageAsset Include="Images.xcassets\view_about.imageset\view_about%402x.png" />

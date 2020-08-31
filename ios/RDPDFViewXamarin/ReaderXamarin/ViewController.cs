@@ -8,7 +8,7 @@ using CoreGraphics;
 namespace ReaderXamarin
 {
 	public class RadaeeDelegate : RadaeePDFPluginDelegate
-	{
+    {
         RadaeePDFPlugin plugin;
 
         public RadaeeDelegate(RadaeePDFPlugin plugin)
