@@ -288,6 +288,17 @@ namespace RadaeeLib
 		void Setup ();
 	}
 
+	// @interface RDToolbar : UIToolbar
+	[BaseType(typeof(UIToolbar))]
+	[Protocol]
+	interface RDToolbar
+	{
+		// @property (nonatomic, weak) UIView * _Nullable shadow __attribute__((iboutlet));
+		[NullAllowed, Export("shadow", ArgumentSemantic.Weak)]
+		UIView Shadow { get; set; }
+	}
+
+
 	// @interface RDMetaDataViewController : UIViewController
 	[BaseType (typeof(UIViewController))]
 	interface RDMetaDataViewController
