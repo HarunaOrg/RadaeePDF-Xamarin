@@ -288,16 +288,6 @@ namespace RadaeeLib
 		void Setup ();
 	}
 
-	// @interface RDToolbar : UIToolbar
-	[BaseType(typeof(UIToolbar))]
-	[Protocol]
-	interface RDToolbar
-	{
-		// @property (nonatomic, weak) UIView * _Nullable shadow __attribute__((iboutlet));
-		[NullAllowed, Export("shadow", ArgumentSemantic.Weak)]
-		UIView Shadow { get; set; }
-	}
-
 
 	// @interface RDMetaDataViewController : UIViewController
 	[BaseType (typeof(UIViewController))]
@@ -921,4 +911,371 @@ namespace RadaeeLib
 		
 		NSObject Global { get; }
 	}
+
+	// @interface RDToolbar : UIToolbar
+	[BaseType(typeof(UIToolbar))]
+	[Protocol]
+	interface RDToolbar
+	{
+		// @property (nonatomic, weak) UIView * _Nullable shadow __attribute__((iboutlet));
+		[NullAllowed, Export("shadow", ArgumentSemantic.Weak)]
+		UIView Shadow { get; set; }
+	}
+
+	// @interface RDPDFCanvas : UIView
+	[BaseType(typeof(UIView))]
+	interface RDPDFCanvas
+	{
+	}
+
+	// @interface RDPDFView : UIView
+	[BaseType(typeof(UIView))]
+	interface RDPDFView
+	{
+	}
+
+	// @interface RDPDFThumb : RDPDFView
+	[BaseType(typeof(RDPDFView))]
+	interface RDPDFThumb
+	{
+	}
+
+	// @interface SearchResultViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+	[BaseType(typeof(UIViewController))]
+	interface SearchResultViewController : IUITableViewDataSource, IUITableViewDelegate
+	{
+
+		// @property (nonatomic, strong) UITableView * tableView __attribute__((iboutlet));
+		[Export("tableView", ArgumentSemantic.Strong)]
+		UITableView TableView { get; set; }
+
+		// -(void)dismissView:(id)sender __attribute__((ibaction));
+		[Export("dismissView:")]
+		void DismissView(NSObject sender);
+	}
+
+	// @interface RDPopupTextViewController : UIViewController
+	[BaseType(typeof(UIViewController))]
+	interface RDPopupTextViewController
+	{
+		// @property (nonatomic, strong) UITextField * subjectTextField __attribute__((iboutlet));
+		[Export("subjectTextField", ArgumentSemantic.Strong)]
+		UITextField SubjectTextField { get; set; }
+
+		// @property (nonatomic, strong) UITextView * textView __attribute__((iboutlet));
+		[Export("textView", ArgumentSemantic.Strong)]
+		UITextView TextView { get; set; }
+
+		// @property (nonatomic, strong) UIButton * dismissButton __attribute__((iboutlet));
+		[Export("dismissButton", ArgumentSemantic.Strong)]
+		UIButton DismissButton { get; set; }
+
+		// -(void)dismissView:(id)sender __attribute__((ibaction));
+		[Export("dismissView:")]
+		void DismissView(NSObject sender);
+	}
+
+	// @interface RDTreeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+	[BaseType(typeof(UIViewController))]
+	interface RDTreeViewController : IUITableViewDataSource, IUITableViewDelegate
+	{
+
+		// @property (nonatomic, strong) UITableView * _Nonnull tableView __attribute__((iboutlet));
+		[Export("tableView", ArgumentSemantic.Strong)]
+		UITableView TableView { get; set; }
+
+		// -(void)dismissView:(id _Nonnull)sender __attribute__((ibaction));
+		[Export("dismissView:")]
+		void DismissView(NSObject sender);
+	}
+
+	// @interface PDFReaderCtrl : UIViewController
+	[BaseType(typeof(UIViewController))]
+	interface PDFReaderCtrl
+	{
+		// __weak IBOutlet RDPDFView *mView;
+		[Export("mView", ArgumentSemantic.Strong)]
+		RDPDFView MView { get; set; }
+
+		//__weak IBOutlet RDPDFThumb* mThumb;
+		[Export("mThumb", ArgumentSemantic.Strong)]
+		RDPDFThumb MThumb { get; set; }
+
+		//__weak IBOutlet UIView* mSliderView;
+		[Export("mSliderView", ArgumentSemantic.Strong)]
+		UIView MSliderView { get; set; }
+
+		//__weak IBOutlet UISlider* mSlider;
+		[Export("mSlider", ArgumentSemantic.Strong)]
+		UISlider MSlider { get; set; }
+
+		//__weak IBOutlet UILabel* mSliderLabel;
+		[Export("mSliderLabel", ArgumentSemantic.Strong)]
+		UILabel MSliderLabel { get; set; }
+
+		//__weak IBOutlet UIToolbar* mBarNoneTop;
+		[Export("mBarNoneTop", ArgumentSemantic.Strong)]
+		UIToolbar MBarNoneTop { get; set; }
+
+		//__weak IBOutlet RDToolbar* mBarNoneBottom;
+		[Export("mBarNoneBottom", ArgumentSemantic.Strong)]
+		RDToolbar MBarNoneBottom { get; set; }
+
+		//__weak IBOutlet UIBarButtonItem* mBarThumbButton;
+		[Export("mBarThumbButton", ArgumentSemantic.Strong)]
+		UIBarButtonItem MBarThumbButton { get; set; }
+
+		//__weak IBOutlet RDToolbar* mBarAnnot;
+		[Export("mBarAnnot", ArgumentSemantic.Strong)]
+		RDToolbar MBarAnnot { get; set; }
+
+		//__weak IBOutlet UIBarButtonItem* mBarAnnotColorButton;
+		[Export("mBarAnnotColorButton", ArgumentSemantic.Strong)]
+		UIBarButtonItem MBarAnnotColorButton { get; set; }
+
+		//__weak IBOutlet UIBarButtonItem* mBarAnnotDoneButton;
+		[Export("mBarAnnotDoneButton", ArgumentSemantic.Strong)]
+		UIBarButtonItem MBarAnnotDoneButton { get; set; }
+
+		//__weak IBOutlet UIToolbar* mBarSearchTop;
+		[Export("mBarSearchTop", ArgumentSemantic.Strong)]
+		UIToolbar MBarSearchTop { get; set; }
+
+		//__weak IBOutlet RDToolbar* mBarSearchBottom;
+		[Export("mBarSearchBottom", ArgumentSemantic.Strong)]
+		RDToolbar MBarSearchBottom { get; set; }
+
+		//__weak IBOutlet UIBarButtonItem* mBarSearchResults;
+		[Export("mBarSearchResults", ArgumentSemantic.Strong)]
+		UIBarButtonItem MBarSearchResults { get; set; }
+
+		//__weak IBOutlet UITextField* mSearchText;
+		[Export("mSearchText", ArgumentSemantic.Strong)]
+		UITextField MSearchText { get; set; }
+
+		//__weak IBOutlet UIButton* mSearchWhole;
+		[Export("mSearchWhole", ArgumentSemantic.Strong)]
+		UIButton MSearchWhole { get; set; }
+
+		//__weak IBOutlet UIButton* mSearchCase;
+		[Export("mSearchCase", ArgumentSemantic.Strong)]
+		UIButton MSearchCase { get; set; }
+
+		//__weak IBOutlet UIBarButtonItem* fileName;
+		[Export("fileName", ArgumentSemantic.Strong)]
+		UIBarButtonItem FileName { get; set; }
+
+		//__weak IBOutlet UIBarButtonItem* mBtnBack;
+		[Export("mBtnBack", ArgumentSemantic.Strong)]
+		UIBarButtonItem MBtnBack { get; set; }
+
+		//__weak IBOutlet UIBarButtonItem* mBtnCancel;
+		[Export("mBtnCancel", ArgumentSemantic.Strong)]
+		UIBarButtonItem MBtnCancel { get; set; }
+
+		//__weak IBOutlet UIBarButtonItem* mBtnDone;
+		[Export("mBtnDone", ArgumentSemantic.Strong)]
+		UIBarButtonItem MBtnDone { get; set; }
+
+		//__weak IBOutlet UIBarButtonItem* mBtnPrev;
+		[Export("mBtnPrev", ArgumentSemantic.Strong)]
+		UIBarButtonItem MBtnPrev { get; set; }
+
+		//__weak IBOutlet UIBarButtonItem* mBtnNext;
+		[Export("mBtnNext", ArgumentSemantic.Strong)]
+		UIBarButtonItem MBtnNext { get; set; }
+
+		// @property (nonatomic, strong) UIImage * closeImage;
+		[Export("closeImage", ArgumentSemantic.Strong)]
+		UIImage CloseImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * viewModeImage;
+		[Export("viewModeImage", ArgumentSemantic.Strong)]
+		UIImage ViewModeImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * searchImage;
+		[Export("searchImage", ArgumentSemantic.Strong)]
+		UIImage SearchImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * bookmarkImage;
+		[Export("bookmarkImage", ArgumentSemantic.Strong)]
+		UIImage BookmarkImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * addBookmarkImage;
+		[Export("addBookmarkImage", ArgumentSemantic.Strong)]
+		UIImage AddBookmarkImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * outlineImage;
+		[Export("outlineImage", ArgumentSemantic.Strong)]
+		UIImage OutlineImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * lineImage;
+		[Export("lineImage", ArgumentSemantic.Strong)]
+		UIImage LineImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * rowImage;
+		[Export("rowImage", ArgumentSemantic.Strong)]
+		UIImage RowImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * rectImage;
+		[Export("rectImage", ArgumentSemantic.Strong)]
+		UIImage RectImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * ellipseImage;
+		[Export("ellipseImage", ArgumentSemantic.Strong)]
+		UIImage EllipseImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * bitmapImage;
+		[Export("bitmapImage", ArgumentSemantic.Strong)]
+		UIImage BitmapImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * noteImage;
+		[Export("noteImage", ArgumentSemantic.Strong)]
+		UIImage NoteImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * signatureImage;
+		[Export("signatureImage", ArgumentSemantic.Strong)]
+		UIImage SignatureImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * printImage;
+		[Export("printImage", ArgumentSemantic.Strong)]
+		UIImage PrintImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * shareImage;
+		[Export("shareImage", ArgumentSemantic.Strong)]
+		UIImage ShareImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * gridImage;
+		[Export("gridImage", ArgumentSemantic.Strong)]
+		UIImage GridImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * deleteImage;
+		[Export("deleteImage", ArgumentSemantic.Strong)]
+		UIImage DeleteImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * doneImage;
+		[Export("doneImage", ArgumentSemantic.Strong)]
+		UIImage DoneImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * removeImage;
+		[Export("removeImage", ArgumentSemantic.Strong)]
+		UIImage RemoveImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * prevImage;
+		[Export("prevImage", ArgumentSemantic.Strong)]
+		UIImage PrevImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * nextImage;
+		[Export("nextImage", ArgumentSemantic.Strong)]
+		UIImage NextImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * undoImage;
+		[Export("undoImage", ArgumentSemantic.Strong)]
+		UIImage UndoImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * redoImage;
+		[Export("redoImage", ArgumentSemantic.Strong)]
+		UIImage RedoImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * performImage;
+		[Export("performImage", ArgumentSemantic.Strong)]
+		UIImage PerformImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * moreImage;
+		[Export("moreImage", ArgumentSemantic.Strong)]
+		UIImage MoreImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * drawImage;
+		[Export("drawImage", ArgumentSemantic.Strong)]
+		UIImage DrawImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * selectImage;
+		[Export("selectImage", ArgumentSemantic.Strong)]
+		UIImage SelectImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * saveImage;
+		[Export("saveImage", ArgumentSemantic.Strong)]
+		UIImage SaveImage { get; set; }
+
+		// @property (nonatomic, strong) UIImage * metaImage;
+		[Export("metaImage", ArgumentSemantic.Strong)]
+		UIImage MetaImage { get; set; }
+
+		// @property (nonatomic) BOOL hideSearchImage;
+		[Export("hideSearchImage")]
+		bool HideSearchImage { get; set; }
+
+		// @property (nonatomic) BOOL hideDrawImage;
+		[Export("hideDrawImage")]
+		bool HideDrawImage { get; set; }
+
+		// @property (nonatomic) BOOL hideSelImage;
+		[Export("hideSelImage")]
+		bool HideSelImage { get; set; }
+
+		// @property (nonatomic) BOOL hideUndoImage;
+		[Export("hideUndoImage")]
+		bool HideUndoImage { get; set; }
+
+		// @property (nonatomic) BOOL hideRedoImage;
+		[Export("hideRedoImage")]
+		bool HideRedoImage { get; set; }
+
+		// @property (nonatomic) BOOL hideMoreImage;
+		[Export("hideMoreImage")]
+		bool HideMoreImage { get; set; }
+
+		// @property (nonatomic) BOOL hideGridImage;
+		[Export("hideGridImage")]
+		bool HideGridImage { get; set; }
+
+		// -(void)back_pressed:(id)sender __attribute__((ibaction));
+		[Export("back_pressed:")]
+		void Back_pressed(NSObject sender);
+
+		// -(void)mode_pressed:(id)sender __attribute__((ibaction));
+		[Export("mode_pressed:")]
+		void Mode_pressed(NSObject sender);
+
+		// -(void)thumb_pressed:(id)sender __attribute__((ibaction));
+		[Export("thumb_pressed:")]
+		void Thumb_pressed(NSObject sender);
+
+		// -(void)tool_pressed:(id)sender __attribute__((ibaction));
+		[Export("tool_pressed:")]
+		void Tool_pressed(NSObject sender);
+
+		// -(void)annot_pressed:(id)sender __attribute__((ibaction));
+		[Export("annot_pressed:")]
+		void Annot_pressed(NSObject sender);
+
+		// -(void)search_pressed:(id)sender __attribute__((ibaction));
+		[Export("search_pressed:")]
+		void Search_pressed(NSObject sender);
+
+		// -(void)annot_ok:(id)sender __attribute__((ibaction));
+		[Export("annot_ok:")]
+		void Annot_ok(NSObject sender);
+
+		// -(void)annot_cancel:(id)sender __attribute__((ibaction));
+		[Export("annot_cancel:")]
+		void Annot_cancel(NSObject sender);
+
+		// -(void)annot_color:(id)sender __attribute__((ibaction));
+		[Export("annot_color:")]
+		void Annot_color(NSObject sender);
+
+		// -(void)search_cancel:(id)sender __attribute__((ibaction));
+		[Export("search_cancel:")]
+		void Search_cancel(NSObject sender);
+
+		// -(void)search_backward:(id)sender __attribute__((ibaction));
+		[Export("search_backward:")]
+		void Search_backward(NSObject sender);
+
+		// -(void)search_forward:(id)sender __attribute__((ibaction));
+		[Export("search_forward:")]
+		void Search_forward(NSObject sender);
+	}
+
 }
