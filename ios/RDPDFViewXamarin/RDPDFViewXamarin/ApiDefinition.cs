@@ -912,14 +912,13 @@ namespace RadaeeLib
 		NSObject Global { get; }
 	}
 
-	// @interface RDToolbar : UIToolbar
-	[BaseType(typeof(UIToolbar))]
-	[Protocol]
+	// @interface RDToolbar : UIView
+	[BaseType(typeof(UIView))]
 	interface RDToolbar
 	{
-		// @property (nonatomic, weak) UIView * _Nullable shadow __attribute__((iboutlet));
-		[NullAllowed, Export("shadow", ArgumentSemantic.Weak)]
-		UIView Shadow { get; set; }
+		// @property (nonatomic, weak) UIToolbar * _Nullable toolbar __attribute__((iboutlet));
+		[NullAllowed, Export("toolbar", ArgumentSemantic.Weak)]
+		UIToolbar Toolbar { get; set; }
 	}
 
 	// @interface RDPDFCanvas : UIView
