@@ -1266,7 +1266,7 @@ namespace RadaeeLib
 
 		// -(void)search_cancel:(id)sender __attribute__((ibaction));
 		[Export("search_cancel:")]
-		void Search_cancel(NSObject sender);
+		void Search_cancel(NSObject sender);	
 
 		// -(void)search_backward:(id)sender __attribute__((ibaction));
 		[Export("search_backward:")]
@@ -1275,6 +1275,51 @@ namespace RadaeeLib
 		// -(void)search_forward:(id)sender __attribute__((ibaction));
 		[Export("search_forward:")]
 		void Search_forward(NSObject sender);
+	}
+
+	// @interface PDFPagesCtrl : UIViewController
+	[BaseType(typeof(UIViewController))]
+	interface PDFPagesCtrl
+	{
+		// __weak IBOutlet PDFPagesView *mPages;
+		[Export("mPages", ArgumentSemantic.Strong)]
+		PDFPagesView MPages { get; set; }
+
+		// -(void)OnBtnBack:(id)sender __attribute__((ibaction));
+		[Export("OnBtnBack:")]
+		void OnBtnBack(NSObject sender);
+
+		// -(void)OnBtnDone:(id)sender __attribute__((ibaction));
+		[Export("OnBtnDone:")]
+		void OnBtnDone(NSObject sender);
+	}
+
+	// @interface PDFPagesView : UIScrollView
+	[BaseType(typeof(UIScrollView))]
+	interface PDFPagesView : IUIScrollViewDelegate
+	{
+
+	}
+
+	// @interface UIPageCellView : UIView
+	[BaseType(typeof(UIView))]
+	interface UIPageCellView
+	{
+		// __weak IBOutlet UIImageView *mImg;
+		[Export("mImg", ArgumentSemantic.Strong)]
+		UIImageView MImg { get; set; }
+
+		// __weak IBOutlet UIView *mTools;
+		[Export("mTools", ArgumentSemantic.Strong)]
+		UIView MTools { get; set; }
+
+		// -(void)OnPageDelete:(id)sender __attribute__((ibaction));
+		[Export("OnPageDelete:")]
+		void OnPageDelete(NSObject sender);
+
+		// -(void)OnPageRotate:(id)sender __attribute__((ibaction));
+		[Export("OnPageRotate:")]
+		void OnPageRotate(NSObject sender);
 	}
 
 }

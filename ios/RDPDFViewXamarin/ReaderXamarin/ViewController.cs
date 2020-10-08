@@ -123,12 +123,13 @@ namespace ReaderXamarin
              * 2: Horizontal RTOL
              * 3: Single Page (LTOR, paging enabled)
              * 4: Double Page (LTOR, paging enabled)
-             */
+            */
 
-            RDVGlobal.SharedInstance.G_render_mode = 3; // Set render mode
+            RDVGlobal.SharedInstance.G_render_mode = 0; // Set render mode
+            RDVGlobal.SharedInstance.G_navigation_mode = 0;
 
             //Open from assets
-            UIViewController controller = (UIKit.UIViewController)plugin.OpenFromAssets("test.pdf", "");
+            PDFReaderCtrl controller = (RadaeeLib.PDFReaderCtrl)plugin.Show("file://help.pdf", "");
 
             //Set Callback for RadaeeDelegate
             selector = new RadaeeDelegate(plugin);

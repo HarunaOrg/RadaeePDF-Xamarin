@@ -137,9 +137,6 @@
     <BundleResource Include="Resources\test.pdf" />
     <BundleResource Include="Resources\GUST e-foundry License.txt" />
     <BundleResource Include="Resources\fld.pdf" />
-    <BundleResource Include="Resources\cmaps\umaps.dat" />
-    <BundleResource Include="Resources\cmaps\cmyk_rgb.dat" />
-    <BundleResource Include="Resources\cmaps\cmaps.dat" />
     <BundleResource Include="Resources\fonts\cousineb.ttf" />
     <BundleResource Include="Resources\fonts\arimob.ttf" />
     <BundleResource Include="Resources\fonts\texgyretermes-bolditalic.otf" />
@@ -155,6 +152,30 @@
     <BundleResource Include="Resources\fonts\rdf013.dat" />
     <BundleResource Include="Resources\fonts\cousinei.ttf" />
     <BundleResource Include="Resources\fonts\texgyretermes-italic.otf" />
+    <BundleResource Include="Resources\PDFRes\enc.pdf" />
+    <BundleResource Include="Resources\PDFRes\help.pdf" />
+    <BundleResource Include="Resources\PDFRes\outlines.pdf" />
+    <BundleResource Include="Resources\PDFRes\test.pdf" />
+    <BundleResource Include="Resources\PDFRes\GUST e-foundry License.txt" />
+    <BundleResource Include="Resources\PDFRes\fld.pdf" />
+    <BundleResource Include="Resources\PDFRes\cmaps\umaps.dat" />
+    <BundleResource Include="Resources\PDFRes\cmaps\cmyk_rgb.dat" />
+    <BundleResource Include="Resources\PDFRes\cmaps\cmaps.dat" />
+    <BundleResource Include="Resources\PDFRes\fonts\cousineb.ttf" />
+    <BundleResource Include="Resources\PDFRes\fonts\arimob.ttf" />
+    <BundleResource Include="Resources\PDFRes\fonts\texgyretermes-bolditalic.otf" />
+    <BundleResource Include="Resources\PDFRes\fonts\cousine.ttf" />
+    <BundleResource Include="Resources\PDFRes\fonts\rdf008.dat" />
+    <BundleResource Include="Resources\PDFRes\fonts\texgyretermes-bold.otf" />
+    <BundleResource Include="Resources\PDFRes\fonts\argbsn00lp.ttf" />
+    <BundleResource Include="Resources\PDFRes\fonts\texgyretermes-regular.otf" />
+    <BundleResource Include="Resources\PDFRes\fonts\cousinebi.ttf" />
+    <BundleResource Include="Resources\PDFRes\fonts\arimo.ttf" />
+    <BundleResource Include="Resources\PDFRes\fonts\arimobi.ttf" />
+    <BundleResource Include="Resources\PDFRes\fonts\arimoi.ttf" />
+    <BundleResource Include="Resources\PDFRes\fonts\rdf013.dat" />
+    <BundleResource Include="Resources\PDFRes\fonts\cousinei.ttf" />
+    <BundleResource Include="Resources\PDFRes\fonts\texgyretermes-italic.otf" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Images.xcassets\Contents.json" />
