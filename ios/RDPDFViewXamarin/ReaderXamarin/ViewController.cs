@@ -126,7 +126,7 @@ namespace ReaderXamarin
             */
 
             RDVGlobal.SharedInstance.G_render_mode = 0; // Set render mode
-            RDVGlobal.SharedInstance.G_navigation_mode = 0;
+            RDVGlobal.SharedInstance.G_navigation_mode = 1;
 
             //Open from assets
             PDFReaderCtrl controller = (RadaeeLib.PDFReaderCtrl)plugin.Show("file://help.pdf", "");
@@ -134,9 +134,6 @@ namespace ReaderXamarin
             //Set Callback for RadaeeDelegate
             selector = new RadaeeDelegate(plugin);
             plugin.SetDelegate(selector);
-
-            this.NavigationController.NavigationBar.BarTintColor = UIColor.Black;
-            this.NavigationController.NavigationBar.TintColor = UIColor.Orange;
 
             if (controller != null)
             {
