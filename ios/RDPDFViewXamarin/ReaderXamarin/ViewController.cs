@@ -94,9 +94,23 @@ namespace ReaderXamarin
 			base.ViewDidLoad();
 			// Perform any additional setup after loading the view, typically from a nib.
 			this.Title = "Xamarin Demo";
-		}
 
-		public override void DidReceiveMemoryWarning()
+            NSError error;
+            NSString document = (NSString)Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            NSString pdfRes = (NSString)NSBundle.MainBundle.PathForResource("PDFRes", "");
+            foreach (NSString dpath in NSFileManager.DefaultManager.GetDirectoryContent(pdfRes, out error)) {
+                if (dpath.PathExtension == "pdf" || dpath.PathExtension == "PDF") {
+                    NSString srcPath = pdfRes.AppendPathComponent(dpath);
+                    NSString destPath = document.AppendPathComponent(dpath);
+                    if (!NSFileManager.DefaultManager.FileExists(destPath)) {
+                        NSFileManager.DefaultManager.Copy(srcPath, destPath, out error);
+                    }
+                }
+            }
+
+        }
+
+        public override void DidReceiveMemoryWarning()
 		{
 			base.DidReceiveMemoryWarning();
 			// Release any cached data, images, etc that aren't in use.

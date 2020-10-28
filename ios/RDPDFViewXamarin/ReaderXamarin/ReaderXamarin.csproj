@@ -88,6 +88,7 @@
     <Folder Include="Resources\" />
     <Folder Include="Resources\en.lproj\" />
     <Folder Include="Resources\it.lproj\" />
+    <Folder Include="Images.xcassets\btn_manage_page.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -131,12 +132,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\en.lproj\Localizable.strings" />
     <BundleResource Include="Resources\it.lproj\Localizable.strings" />
-    <BundleResource Include="Resources\enc.pdf" />
-    <BundleResource Include="Resources\help.pdf" />
-    <BundleResource Include="Resources\outlines.pdf" />
-    <BundleResource Include="Resources\test.pdf" />
     <BundleResource Include="Resources\GUST e-foundry License.txt" />
-    <BundleResource Include="Resources\fld.pdf" />
     <BundleResource Include="Resources\fonts\cousineb.ttf" />
     <BundleResource Include="Resources\fonts\arimob.ttf" />
     <BundleResource Include="Resources\fonts\texgyretermes-bolditalic.otf" />
@@ -345,10 +341,6 @@
     <ImageAsset Include="Images.xcassets\btn_edit_box.imageset\btn_edit_box-1.png" />
     <ImageAsset Include="Images.xcassets\btn_edit_box.imageset\btn_edit_box.png" />
     <ImageAsset Include="Images.xcassets\btn_edit_box.imageset\Contents.json" />
-    <ImageAsset Include="Images.xcassets\btn_edit_page.imageset\btn_edit_page.png" />
-    <ImageAsset Include="Images.xcassets\btn_edit_page.imageset\btn_edit_page-1.png" />
-    <ImageAsset Include="Images.xcassets\btn_edit_page.imageset\Contents.json" />
-    <ImageAsset Include="Images.xcassets\btn_edit_page.imageset\btn_edit_page-2.png" />
     <ImageAsset Include="Images.xcassets\btn_files.imageset\btn_files-2x.png" />
     <ImageAsset Include="Images.xcassets\btn_files.imageset\btn_files-3x.png" />
     <ImageAsset Include="Images.xcassets\btn_files.imageset\btn_files.png" />
@@ -377,6 +369,10 @@
     <ImageAsset Include="Images.xcassets\alpha.imageset\alpha.jpg" />
     <ImageAsset Include="Images.xcassets\alpha.imageset\alpha%402x.jpg" />
     <ImageAsset Include="Images.xcassets\alpha.imageset\Contents.json" />
+    <ImageAsset Include="Images.xcassets\btn_manage_page.imageset\Contents.json" />
+    <ImageAsset Include="Images.xcassets\btn_manage_page.imageset\btn_manage_page.png" />
+    <ImageAsset Include="Images.xcassets\btn_manage_page.imageset\btn_manage_page-2x.png" />
+    <ImageAsset Include="Images.xcassets\btn_manage_page.imageset\btn_manage_page-3x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
