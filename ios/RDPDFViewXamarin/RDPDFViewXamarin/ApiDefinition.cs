@@ -1060,9 +1060,9 @@ namespace RadaeeLib
 		[Export("mSearchCase", ArgumentSemantic.Strong)]
 		UIButton MSearchCase { get; set; }
 
-		//__weak IBOutlet UIBarButtonItem* fileName;
+		//__weak IBOutlet UILabel* fileName;
 		[Export("fileName", ArgumentSemantic.Strong)]
-		UIBarButtonItem FileName { get; set; }
+		UILabel FileName { get; set; }
 
 		//__weak IBOutlet UIBarButtonItem* mBtnBack;
 		[Export("mBtnBack", ArgumentSemantic.Strong)]
